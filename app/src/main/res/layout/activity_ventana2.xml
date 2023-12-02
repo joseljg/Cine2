@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Ventana2Activity">
+
+    <EditText
+        android:id="@+id/edt_dia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="56dp"
+        android:autofillHints="LO QUE SEA"
+        android:ems="10"
+        android:hint="ELIGE UN DIA"
+        android:inputType="text"
+        android:minHeight="48dp"
+        android:focusableInTouchMode="false"
+        android:onClick="mostrar_calendario"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/edt_hora"
+        android:focusableInTouchMode="false"
+        android:onClick="mostrar_reloj1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="63dp"
+        android:autofillHints="LO QUE SEA"
+        android:ems="10"
+        android:hint="ELIGE HORA"
+        android:inputType="text"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edt_dia" />
+
+    <TextView
+        android:id="@+id/txt_titulo_pago"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:text="TOTAL A PAGAR"
+        android:textSize="40sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.045"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edt_hora" />
+
+    <TextView
+        android:id="@+id/txt_titulo_tipo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="24dp"
+        android:text="Tipo:"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_titulo_pago" />
+
+    <TextView
+        android:id="@+id/txt_tipo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="aqui viene el tipo"
+        android:textSize="24sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/txt_titulo_tipo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.36"
+        app:layout_constraintStart_toEndOf="@+id/txt_titulo_tipo" />
+
+    <TextView
+        android:id="@+id/txt_titulo_precio_entrada"
+        android:layout_width="96dp"
+        android:layout_height="82dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="19dp"
+        android:text="Precio Entrada"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_titulo_tipo" />
+
+    <TextView
+        android:id="@+id/txt_precio_entrada"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:text="aqui viene el precio entrada"
+        android:textSize="24sp"
+        app:layout_constraintStart_toEndOf="@+id/txt_titulo_precio_entrada"
+        app:layout_constraintTop_toBottomOf="@+id/txt_tipo" />
+
+    <TextView
+        android:id="@+id/txt_titulo_cantidad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        android:text="Cantidad"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_titulo_precio_entrada" />
+
+    <TextView
+        android:id="@+id/txt_cantidad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="22dp"
+        android:text="aqui viene la cantidad"
+        android:textSize="24sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/txt_titulo_cantidad"
+        app:layout_constraintStart_toEndOf="@+id/txt_titulo_cantidad" />
+
+    <TextView
+        android:id="@+id/txt_titulo_total"
+        android:layout_width="90dp"
+        android:layout_height="93dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="26dp"
+        android:text="TOTAL A PAGAR:"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_titulo_cantidad" />
+
+    <TextView
+        android:id="@+id/txt_total"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="36dp"
+        android:text="Aqui viene el total+"
+        android:textSize="24sp"
+        app:layout_constraintStart_toEndOf="@+id/txt_titulo_total"
+        app:layout_constraintTop_toBottomOf="@+id/txt_cantidad" />
+
+    <CheckBox
+        android:id="@+id/ck_condiciones"
+        android:layout_width="253dp"
+        android:layout_height="58dp"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="7dp"
+        android:text="Acepto condiciones"
+        android:textSize="24sp"
+        app:layout_constraintStart_toEndOf="@+id/txt_titulo_total"
+        app:layout_constraintTop_toBottomOf="@+id/txt_total" />
+
+    <Button
+        android:id="@+id/bt_pagar_total"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="49dp"
+        android:layout_marginBottom="32dp"
+        android:onClick="ir_a_pago"
+        android:text="Pagar paypal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

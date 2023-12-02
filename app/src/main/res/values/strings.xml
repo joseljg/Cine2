@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Cine2</string>
+    <string-array name="peliculas">
+        <item>pelicula1</item>
+        <item>pelicula2</item>
+        <item>pelicula3</item>
+        <item>pelicula4</item>
+    </string-array>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
